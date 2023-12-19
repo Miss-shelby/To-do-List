@@ -23,7 +23,7 @@ label{
     display: block;
     width: 100%;
 }
-input{
+form input{
     width:70%;
     outline: none;
     border: none;
@@ -91,7 +91,14 @@ button:hover {
         font-size: 20px;
         text-align: center;
     }
-    input{
+    li{
+        font-size: 20px;
+    }
+    .delete{
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+    form input{
         width: 90%;
         font-size: 14px;
         padding: 8px 10px;

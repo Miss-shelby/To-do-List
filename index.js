@@ -8,14 +8,21 @@ function addTask() {
     const li = document.createElement('li')
     li.innerHTML=`
      <ul class="todos">
-            <li>${userInput}<span class="delete">Delete </span></li>
+            <li> <input type="checkbox" name="" id="check">  ${userInput} <span class="delete">Delete </span></li>
         </ul> 
     `
     li.style.marginTop='20px'
     ul.appendChild(li)
-
+    const checkBox = li.querySelector('#check')
+    checkBox.addEventListener('click',()=>{
+        if(checkBox.checked){
+            li.style.textDecoration='line-through'
+        }else{
+             li.style.textDecoration='none'
+        }
+    })
     const deleteBtn=li.querySelector('.delete')
-   deleteBtn.addEventListener("click",()=>{
+    deleteBtn.addEventListener("click",()=>{
        ul.removeChild(li)
   })
   input.value="";
